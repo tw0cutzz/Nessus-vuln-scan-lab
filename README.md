@@ -82,7 +82,7 @@ Windows version or isolate the machine if that isn't possible.
 
 See the [`screenshots`](./screenshots) folder.
 
-- `01-uncredentialed-scan.png`
+- `Firefox Vulnerability.png`
 - `02-credentialed-scan-before.png`
 - `03-credentialed-scan-after.png`
 - [add yours]
