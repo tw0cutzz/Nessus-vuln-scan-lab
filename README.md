@@ -10,9 +10,6 @@ and scan again to see what changed.
 - **Target VM:** Windows 10 (deliberately weakened)
 - **Network:** libvirt default NAT network, both VMs on the same network
 
-Nessus Essentials is free, but the license lasts 30 days and covers up to
-5 IPs. That's plenty for 2 VMs, but it means exporting reports as you go.
-
 ## What I did
 
 1. Set up both VMs and took snapshots of the clean state.
@@ -35,9 +32,9 @@ Nessus Essentials is free, but the license lasts 30 days and covers up to
 
 | Scan | Critical | High | Medium | Low | Info |
 |------|----------|------|--------|-----|------|
-| Uncredentialed (baseline) | [x] | [x] | 1 | [x] | [x] |
-| Credentialed (vulnerable) | [x] | [x] | [x] | [x] | [x] |
-| Credentialed (after fixes) | [x] | [x] | [x] | [x] | [x] |
+| Uncredentialed (baseline) | 0 | 0 | 1 | 0 | 29 |
+| Credentialed (vulnerable) | 70 | 122 | 25 | 3 | 189 |
+| Credentialed (after fixes) | 2 | 11 | 3 | 1 | 101 |
 
 ### Uncredentialed vs credentialed
 
@@ -64,15 +61,10 @@ software, and config problems. Same machine, very different picture.
 ## What couldn't be fixed
 
 Windows 10 reached end of support in October 2025, so Microsoft no longer
-releases patches for it. Some findings stay open no matter what I do:
-
-| Finding | Why it stays |
-|---------|--------------|
-| [finding name] | [e.g. needs a patch that doesn't exist for Win10] |
-| [finding name] | [reason] |
+releases patches. Some findings stay open no matter what I do.
 
 In a real environment the answer here would be to upgrade to a supported
-Windows version, or isolate the machine if that isn't possible.
+Windows version or isolate the machine if that isn't possible.
 
 ## Things I learned
 
