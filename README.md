@@ -93,7 +93,6 @@ See the [`screenshots`](./screenshots) folder.
 .
 ├── README.md
 ├── screenshots/
-├── reports/        # exported Nessus PDF/CSV reports
 └── commands.md     # PowerShell commands used to weaken and fix the VM
 ```
 
